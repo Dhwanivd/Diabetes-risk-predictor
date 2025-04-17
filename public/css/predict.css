@@ -1,0 +1,73 @@
+.predict-box{
+    margin: 0;
+    position:absolute;
+    
+    top: 110px;
+    width: 100%;
+}
+.predict-box h2{
+    padding: 20px;
+    text-align: center;
+}
+.predict-form{
+    display: flex;
+    justify-content: center;
+}
+.predict-form-label{
+    margin: auto;
+    width: 30rem;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.predict-form-label label{
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer; /* Change cursor to pointer when hovering over labels */
+}
+.predict-form-label input[type="radio"] {
+    vertical-align: middle;
+    margin: 0; /* Reset default margin */
+}
+
+.predict-btns{
+    display: flex;
+    justify-content: space-around;
+}
+.predict-form button{
+    font-size: 1.2rem;
+    padding: 10px;
+    font-weight: 200;
+    margin: 30px;
+    cursor: pointer;
+
+}
+#predict-submitbtn{
+    background-color: #6874cc;
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+#predict-resetbtn{
+    border:#6874cc 2px solid;
+    border-radius: 10px;
+    color: #6874cc;
+    background-color: aliceblue;
+    font-weight: 300;
+}
+@media (max-width:600px) {
+    .predict-form-label{
+        flex-wrap: wrap;
+        width: 50%;
+    }
+}
+#predict-resetbtn:hover{
+    box-shadow: 0 2px 4px 0 #6874cc;
+}
+#predict-submitbtn:hover{
+    box-shadow: 0 3px 6px 0 #6874cc;
+}

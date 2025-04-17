@@ -1,0 +1,416 @@
+*{
+  font-family: "Rubik", sans-serif !important;
+  margin:0;
+  padding:0;
+  
+}
+
+/* NAVBAR BEGIN */
+.navbar{
+    position:fixed;
+    /* background-color: white; */
+    z-index: 1;
+    height: 90px;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-heading{
+    margin: 30px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 2rem;
+}
+.navbar-links{
+    display: flex;
+    /* justify-content: center; */
+}
+.navbar-links li , .sidebar-links li {
+    text-decoration:none;
+    margin: 10px;
+    list-style: none;
+}
+.navbar-links li a , .sidebar li a{
+    text-decoration: none;
+    color: black;
+    margin-right: 1rem;
+    font-weight: 400;
+    font-size: large;
+}
+.navbar-links li a:hover{
+    border-bottom: solid black ;
+}
+.navbar-links button{
+    margin-right: 15px;
+    padding: 10px;
+    cursor: pointer;
+    
+}
+.navbar .signup-button{
+    font-weight: 400;
+    font-size: large;
+    background-color: transparent;
+    border-radius: 5px;
+    border-color:#6874cc;
+    color: #6874cc;
+}
+.navbar-content{
+    margin-right: 10px;
+}
+.navbar-links svg{
+    display: none;
+}
+/* NAVBAR END */
+/* SIDEBAR START */
+.sidebar{
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    top:0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    z-index: 1;
+    background-color: #dddde0e4;
+}
+.sidebar h2 , .sidebar-title a{
+    padding: 20px;
+    font-weight: 500;
+}
+.sidebar-links li{
+    margin-left: 10px;
+    font-size: large;
+    padding: 14px;
+}
+.sidebar-links li:hover{
+    box-shadow: -10px 0 15px #6874ccab
+}
+.sidebar-signup{
+    color:#6874cc;
+    padding: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: larger;
+    background-color:rgb(222, 222, 222); border-radius: 4px;
+    border: #6874cc 2px solid;
+}
+.sidebar-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* SIDEBAR END */
+/* responsive nav bar start */
+@media (max-width:820px) {
+    .navbar-content li, .signup-button{
+        display: none;
+    }
+    .navbar-links svg{
+        display: flex;
+    }
+    .sidebar{
+        right: 0;
+    }
+}
+
+/* LOGIN PAGE BEGIN */
+.loginPage{
+    display: none;
+}
+.blur-bg-overplay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.486);
+    z-index: 1;
+    /* pointer-events:none;
+    opacity: 0; */
+}
+.form-popup{
+    position:fixed;
+    top:50%;
+    left:50%;
+    max-width: 330px;
+    width:100%;
+    background-color: rgba(18, 17, 17, 0.966);
+    /* opacity: 0; */
+    color: white;
+    /* pointer-events: none; */
+    transform: translate(-50%,-50%);
+}
+.form-popup .form-box{
+    display: flex;
+}
+.form-content{
+    margin : 25px;
+}
+.login-heading{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+.input-field{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.input-field label{
+    font-size: 0.9rem;
+}
+.input-field input{
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.484);
+    /* opacity: 40%; */
+    border: none;
+    height: 1.5rem;
+    /* border-radius: 0.4rem; */
+    color:rgb(255, 255, 255);
+    line-height: 0.7rem;
+    font-size: 0.7rem;
+}
+::-webkit-input-placeholder {
+    font-size: 0.7rem; /* Change the font size */
+    /* color: azure; */
+    /* padding: 10px; */
+}
+/* to remove hovering effect on input field when user clicks on it */
+input:focus{
+    outline: none;
+    height:1.5rem ;
+}
+.form-loginbtn{
+    width: 100%;
+    background-color:#6874cc;
+    border: none;
+    font-size: 0.7rem;
+    padding: 8px 0;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+.form-bottom{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items:end;
+}
+.form-bottom a{
+    font-size: 0.6rem;
+    text-decoration: none;
+    color: #6874cc;
+}
+
+.form-bottom a:hover{
+    text-decoration:underline #6874cc ;
+}
+.login-close-icon{
+    position: fixed;
+    right: 30px;
+}
+/* LOGIN PAGE END */
+
+/* SIGNUP PAGE START */
+
+
+/* SIGNUP PAGE END */
+/* .sign-up{
+    
+} */
+/* HOME PAGE BEGIN */
+.homepg-start{
+    display:flex;
+    height: 90vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position:relative;
+}
+.homepg-title{
+    font-size: 3rem;
+    font-weight: 500;
+}
+.homepg-box{
+    text-align: center;
+    margin-bottom: 70px;
+}
+.homepg-check-button{
+    border-radius: 20px;
+    border: none;
+    color: white;
+    padding: 20px;
+    font-size: 1.4rem;
+    margin-top: 30px;
+    background-color: #6874cc;
+}
+.homepg-check-button:hover{
+    animation: btn-color;
+    animation-duration: 1s;
+    color: #6874cc;
+    background-color:  rgb(224, 240, 255);
+}
+@keyframes btn-color {
+    from{
+        background-color: #6874cc;
+    }
+    to{
+        background-color: rgb(224, 240, 255);
+        box-shadow: 2px black;
+    }
+}
+/* dynamic text styling */
+.typewriter{
+    display:flex;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+    position: sticky;
+}
+.moving-txt{
+    color: #6874cc;
+    position: sticky;
+    /* border-right: 2px #6874cc solid; */
+    
+}
+.moving-txt::after{
+    content: "";
+    left:0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-left: #6874cc solid 2px;
+    animation: typing 3s steps(15) infinite;
+    background-color: white;
+}
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+/* WHAT IS GLUCOSAGE START */
+.about-us{
+    margin-top: 160px;
+    position: relative;
+    text-align: justify;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:auto;
+}
+.about-us h2 , .whyneedGlucosage h2 , .risk h2{
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: rgb(50, 49, 49);
+    
+}
+.about-us h4, .whyneedGlucosage h4 ,.risk h4{
+    margin: 20px;
+    font-size: 0.8rem;
+    font-weight: 450;
+    text-decoration: underline #707de1 ;
+}
+/* WHAT IS GLUCOSAGE END*/
+/* WHY NEED GLUCOSAGE START */
+.whyneedGlucosage{
+    height: 100%;
+    width: 100%;
+    margin-top: 140px;
+    text-align: center;
+    justify-content: center;
+    position:relative;
+}
+.cards-need{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.card{
+    width: 20%;
+    text-align: justify;
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 #6874cc;
+    margin: 10px;
+    flex-wrap:wrap;
+    font-size: 0.9rem;
+}
+.card h5{
+    text-align: center;
+    /* margin: 10px; */
+    font-size: 0.95rem;
+}
+.card svg{
+    fill: #6874cc;
+    margin-left: 45%;
+}
+/* WHY NEED GLUCOSAGE END */
+
+/* STEPS TO FIND RISK START */
+.risk{
+    height: 80%;
+    display: flex;
+    margin-top: 90px;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+}
+.steps{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.step-cards{
+    text-align: center;
+    margin: 30px;
+}
+.step-cards p{
+    color:#6874cc;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px;
+}
+.step-circle-border{
+    border: 2px dashed #6874cc;
+    padding: 10px;
+    border-radius: 90% ;
+}
+.step-circle{
+    text-align: center;
+    padding: 15px;
+    height: 110px;
+    width: 105px;
+    border:10px solid #6874cc;
+    border-radius: 100%;
+    box-shadow: 1px 0 3px 2px black;
+}
+@media (max-width:500px) {
+    .cards-need{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .steps{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items:center;
+        /* justify-content: center; */
+        margin: auto;
+    }
+    .step-cards{
+        margin: 10px;
+    }
+}
+
+/* STEPS TO FIND RISK END */

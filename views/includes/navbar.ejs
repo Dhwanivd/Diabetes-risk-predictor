@@ -1,0 +1,64 @@
+<nav class="navbar">
+    <h1 class="navbar-heading">GlucoSage</h1>
+    <div class="navbar-content">
+      <ul class="navbar-links">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/predict">Prediction Tool</a></li>
+        
+        <% if (!currUser) {%>
+          <li><a href="/login" onclick=showLoginPage() class="login-button" id="login-btn">Login</a></li>
+          <a href="/signup">
+            <button onclick=openSignupPage() class="signup-button">Sign-up</button>  
+          </a>
+        <% } %>
+        <% if (currUser) {%>
+          <li><a href="/logout">Log out</a></li>
+        <% } %>
+        <div onclick=showSidebar() >
+          <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </div>
+      </ul>  
+   </div>
+</nav>
+
+<nav class="sidebar">
+  <div class="sidebar-title">
+    <h2>GlucoSage </h2>
+    <a onclick=hideSidebar()>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+    </a>
+  </div>
+  <div>   
+    <ul class="sidebar-links">
+      <li><a href="/home">Home</a></li>
+      <li><a href="/predict">Prediction Tool</a></li>
+              
+      <% if (!currUser) {%>
+        <li><a href="/login" onclick=showLoginPage() class="login-button" id="login-btn">Login</a></li>
+        <a href="/signup">
+          <button class="sidebar-signup" type="submit">Sign-up</button>
+        </a>
+        <% } %>
+                
+      <% if (currUser) {%>
+        <li><a href="/logout">Log out</a></li>
+      <% } %>
+    </ul>
+    
+  </div>
+</nav>
+
+
+
+
+<script>
+  function showSidebar(){
+    event.preventDefault();
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+  }
+  function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+  }
+</script>

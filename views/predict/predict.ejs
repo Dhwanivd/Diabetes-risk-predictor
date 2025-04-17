@@ -1,0 +1,182 @@
+<% layout("/layouts/boilerplate") %>
+
+<body>
+    <div class="predict-box">
+    <h2>Predict Your Diabetes Risk Here!</h2>
+    <div class="predict-form">
+        <form action="/predict" method="post"> 
+            <div class="predict-form-label">
+                <label for="age">Age:</label>
+                <div>
+                <input type="number" id="age" name="age" min="20" max="60" required><br>
+                </div>
+            </div>
+
+            <div class="predict-form-label">
+                <label for="gender">Gender:</label>
+                <div class="predict-input">
+                    <input type="radio" id="genderMale" name="gender" value="male" required>
+                    <label for="genderMale">Male</label>
+                    <input type="radio" id="genderFemale" name="gender" value="female" required checked> 
+                    <label for="genderFemale" >Female</label><br>
+                </div>
+            </div>
+        
+            <div class="predict-form-label">
+                <label for="polyuria">Polyuria (Excessive Urination):</label>
+                <div>
+                    <input type="radio" id="polyuriaYes" name="polyuria" value="yes" required>
+                    <label for="polyuriaYes">Yes</label>
+                    <input type="radio" id="polyuriaNo" name="polyuria" value="no" required checked>
+                    <label for="polyuriaNo">No</label><br>
+                </div>
+
+            </div>
+
+            <div class="predict-form-label">
+                <label for="polydipsia">Polydipsia (Excessive Thirst):</label>
+                <div>
+                <input type="radio" id="polydipsiaYes" name="polydipsia" value="yes"required>
+                <label for="polydipsiaYes">Yes</label>
+                <input type="radio" id="polydipsiaNo" name="polydipsia" value="no"required checked>
+                <label for="polydipsiaNo">No</label><br>
+                </div>
+
+            </div>
+            
+    
+            <div class="predict-form-label">
+                <label for="suddenWeightLoss">Sudden Weight Loss:</label>
+                <div>
+                <input type="radio" id="suddenWeightLossYes" name="suddenWeightLoss" value="yes" required>
+                <label for="suddenWeightLossYes">Yes</label>
+                <input type="radio" id="suddenWeightLossNo" name="suddenWeightLoss" value="no" required checked>
+                <label for="suddenWeightLossNo">No</label><br>
+                </div>
+
+            </div>
+            
+            <div class="predict-form-label">
+                <label for="weakness">Weakness:</label>
+                <div>
+                    <input type="radio" id="weaknessYes" name="weakness" value="yes" required>
+                    <label for="weaknessYes">Yes</label>
+                    <input type="radio" id="weaknessNo" name="weakness" value="no" required checked>
+                    <label for="weaknessNo">No</label><br>
+                </div>
+            </div>
+            
+            <div class="predict-form-label">
+                <label for="polyphagia">Polyphagia (Excessive Hunger):</label>
+                <div>
+                    <input type="radio" id="polyphagiaYes" name="polyphagia" value="yes" required>
+                    <label for="polyphagiaYes">Yes</label>
+                    <input type="radio" id="polyphagiaNo" name="polyphagia" value="no" required checked>
+                    <label for="polyphagiaNo">No</label><br>
+                </div>
+            </div>
+
+    
+            <div class="predict-form-label">
+                <label for="genitalThrush">Genital Thrush:</label>
+                <div>
+                    <input type="radio" id="genitalThrushYes" name="genitalThrush" value="yes" required>
+                    <label for="genitalThrushYes">Yes</label>
+                    <input type="radio" id="genitalThrushNo" name="genitalThrush" value="no" required checked>
+                    <label for="genitalThrushNo">No</label><br>
+                </div>
+                
+            </div>
+
+    
+            <div class="predict-form-label">
+                <label for="visualBlurring">Visual Blurring:</label>
+                <div>
+                    <input type="radio" id="visualBlurringYes" name="visualBlurring" value="yes" required>
+                    <label for="visualBlurringYes">Yes</label>
+                    <input type="radio" id="visualBlurringNo" name="visualBlurring" value="no" required checked>
+                    <label for="visualBlurringNo">No</label><br> 
+                </div>
+            </div>
+
+    
+            <div class="predict-form-label">
+                <label for="itching">Itching:</label>
+                <div>
+                    <input type="radio" id="itchingYes" name="itching" value="yes" required>
+                    <label for="itchingYes">Yes</label>
+                    <input type="radio" id="itchingNo" name="itching" value="no" required checked>
+                    <label for="itchingNo">No</label><br> 
+                </div>
+                
+            </div>
+    
+            <div class="predict-form-label">
+                <label for="irritability">Irritability:</label>
+                <div>
+                    <input type="radio" id="irritabilityYes" name="irritability" value="yes" required>
+                    <label for="irritabilityYes">Yes</label>
+                    <input type="radio" id="irritabilityNo" name="irritability" value="no" required checked>
+                    <label for="irritabilityNo">No</label><br>
+                </div>
+            </div>
+    
+            <div class="predict-form-label">
+                <label for="delayedHealing">Delayed Healing:</label>
+                <div>
+                    <input type="radio" id="delayedHealingYes" name="delayedHealing" value="yes" required>
+                    <label for="delayedHealingYes">Yes</label>
+                    <input type="radio" id="delayedHealingNo" name="delayedHealing" value="no" required checked>
+                    <label for="delayedHealingNo">No</label><br>
+                </div>
+            </div>
+    
+            <div class="predict-form-label">
+                <label for="partialParesis">Partial Paresis:</label>
+                <div>
+                    <input type="radio" id="partialParesisYes" name="partialParesis" value="yes" required>
+                    <label for="partialParesisYes">Yes</label>
+                    <input type="radio" id="partialParesisNo" name="partialParesis" value="no" required checked>
+                    <label for="partialParesisNo">No</label><br>
+                </div>
+            </div>
+    
+            <div class="predict-form-label">
+                <label for="muscleStiffness">Muscle Stiffness:</label>
+                <div>
+                    <input type="radio" id="muscleStiffnessYes" name="muscleStiffness" value="yes" required>
+                    <label for="muscleStiffnessYes">Yes</label>
+                    <input type="radio" id="muscleStiffnessNo" name="muscleStiffness" value="no" required checked> 
+                    <label for="muscleStiffnessNo">No</label><br>
+                </div>
+            </div>
+    
+            <div class="predict-form-label">
+                <label for="alopecia">Alopecia (Hair Loss):</label>
+                <div>
+                    <input type="radio" id="alopeciaYes" name="alopecia" value="yes" required>
+                    <label for="alopeciaYes">Yes</label>
+                    <input type="radio" id="alopeciaNo" name="alopecia" value="no" required checked>
+                    <label for="alopeciaNo">No</label><br>
+                </div>
+            </div>
+            
+            <div class="predict-form-label">
+                <label for="obesity">Obesity:</label>
+                <div>
+                    <input type="radio" id="obesityYes" name="obesity" value="yes" required>
+                    <label for="obesityYes">Yes</label>
+                    <input type="radio" id="obesityNo" name="obesity" value="no" required checked>
+                    <label for="obesityNo">No</label><br>
+                </div>
+
+            </div>
+            <div class="predict-btns">
+                <button type="reset" id="predict-resetbtn">Reset</button>
+                <button type="submit" id="predict-submitbtn">Submit</button>
+            </div>
+
+        </form>
+
+    </div>
+</body>
