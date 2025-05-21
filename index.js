@@ -39,9 +39,9 @@ const sessionOptions = {
     },
   };
 
-app.get("/", (res,req)=>{
-  res.send("Hi, This is root!");
-});
+// app.get("/", (res,req)=>{
+//   res.send("Hi, This is root!");
+// });
 
 app.use(session(sessionOptions));
 app.use(flash());
@@ -69,7 +69,7 @@ app.use("/", predictRoute);
 // app.use((err, req, res, next) => {
 //     let { statusCode = 500, message = "Something went Wrong!" } = err;
 //     res.status(statusCode).render("errors.ejs", { message });
-//     // res.status(statusCode).send(message);
+//     // res.status( ).send(message);
 // });
 
 app.listen("8080" , () => {
