@@ -4,7 +4,7 @@ const {spawn} = require("child_process");
 
 function getUserData(userData , callback){
     // const pythonProcess = spawn('python' , ['Algorithm/inputDataProccessing.py']);
-    const pythonProcess = spawn('python' , ['Algorithm/model.py']);
+    const pythonProcess = spawn('python3' , ['Algorithm/model.py']);
 
     pythonProcess.stdin.write(JSON.stringify(userData));
     pythonProcess.stdin.end();
